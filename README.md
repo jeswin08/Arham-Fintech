@@ -215,35 +215,3 @@ docs/
   architecture.md
 ```
 
-## Video demonstration script
-
-Target length: 2–3 minutes.
-
-1. Show the repository and briefly identify `frontend/`, `backend/`, and SQLite.
-2. Start Uvicorn and Vite; open the dashboard.
-3. Point out initial statistics and persisted recent trades.
-4. Click **Start data pull** and show the job status changing from pending/running
-   to completed while the dashboard remains usable.
-5. Highlight the live connection indicator and show new records/statistics
-   appearing without a page refresh.
-6. Open a second browser tab to demonstrate multiple connected clients.
-7. Refresh the page and show that persisted trades remain available.
-8. End by showing `pytest`, `npm run lint`, and `npm run build` results.
-
-## GitHub submission checklist
-
-- [ ] Push the complete repository, including `README.md` and `docs/architecture.md`.
-- [ ] Confirm `.env`, databases, virtual environments, `node_modules`, and build output are ignored.
-- [ ] Confirm `backend/.env.example` and `frontend/.env.example` are present.
-- [ ] Run backend tests and frontend lint/build from a clean checkout.
-- [ ] Verify both startup commands in the README.
-- [ ] Verify the README API examples use the current routes.
-- [ ] Add the assessment video link after recording.
-- [ ] Confirm no secrets or local credentials are committed.
-
-## Known limitations
-
-- The worker is in-process; stopping the API stops active ingestion jobs.
-- SQLite and the in-memory SSE broker are intended for this assessment, not
-  multi-instance production deployment.
-- The frontend currently has no authentication or authorization layer.
